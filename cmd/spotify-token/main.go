@@ -17,8 +17,8 @@ import (
 const redirectURI = "http://localhost/spotify-callback"
 
 type config struct {
-	SporifyCientID     string `env:"SPOTIFY_CLIENT_ID"`
-	SporifyCientSecret string `env:"SPOTIFY_CLIENT_SECRET"`
+	SpotifyCientID     string `env:"SPOTIFY_CLIENT_ID"`
+	SpotifyCientSecret string `env:"SPOTIFY_CLIENT_SECRET"`
 }
 
 func main() {
@@ -44,8 +44,8 @@ func run() error {
 			spotifyauth.ScopePlaylistReadPrivate,
 			spotifyauth.ScopePlaylistModifyPrivate,
 		),
-		spotifyauth.WithClientID(cfg.SporifyCientID),
-		spotifyauth.WithClientSecret(cfg.SporifyCientSecret),
+		spotifyauth.WithClientID(cfg.SpotifyCientID),
+		spotifyauth.WithClientSecret(cfg.SpotifyCientSecret),
 	)
 
 	// set `state` var to something random
