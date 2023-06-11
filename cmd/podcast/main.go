@@ -46,7 +46,7 @@ func run() error {
 	}
 
 	regIntroAutro := regexp.MustCompile(`(?m)^(Интро|Аутро) (подкаста|выпуска):\s+(.*)$`)
-	regEpisode := regexp.MustCompile(`(?m)Разрыв танцполов.* (песн[я|ю|и]( группы)?|композиция|трека?|кавер) (.*?).?$`)
+	regEpisode := regexp.MustCompile(`(?m)Разрыв танцполов.* (песн[я|ю|и]( группы)?|композиция|трека?|кавер) (.*?)\.?$`)
 
 	for _, item := range p.Channel.Items {
 		if regIntroAutro.MatchString(item.Summary) {
