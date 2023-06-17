@@ -1,7 +1,7 @@
 # OdinDoma music
 
 Live coding session where I parse Podcast feed and add tracks to Spotify playlist:
-https://www.youtube.com/watch?v=SFaPXZh5iLg
+https://youtu.be/SD5_X35i1T4
 
 Podcast: https://odindoma.mave.digital/
 
