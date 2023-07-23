@@ -9,6 +9,7 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/caarlos0/env"
 	spotifyauth "github.com/zmb3/spotify/v2/auth"
@@ -19,6 +20,10 @@ const redirectURI = "http://localhost/spotify-callback"
 type config struct {
 	SpotifyCientID     string `env:"SPOTIFY_CLIENT_ID"`
 	SpotifyCientSecret string `env:"SPOTIFY_CLIENT_SECRET"`
+}
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
 }
 
 func main() {
